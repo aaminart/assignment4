@@ -1,0 +1,105 @@
+@import url(http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic);
+body
+{  background-image: url('background\ im.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+header
+{
+    background-color: #76c5c4;
+    color: #fff;
+    padding: 20px;
+    border: 2px solid #000000;
+}
+.cast
+{
+    background-color: #76c5c4;
+}
+#cast
+{
+    background-color: #76c5c4;
+    border: 2px solid #000000;
+}
+
+nav ul
+{
+    list-style: none;
+}
+nav ul li
+{    display: inline;
+    margin-right: 20px;
+}
+nav a
+{
+    text-decoration: none;    color: #fff;
+}
+section
+{    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border: 2px solid #000000;
+}
+form
+{
+    margin-top: 20px;
+}
+label
+{
+    display: block;
+    margin-bottom: 5px;
+}
+input[type="text"],
+input[type="email"],textarea
+{
+    width: 100%;    padding: 10px;
+    margin-bottom: 10px;
+}
+button
+{
+    background-color: #356;    color: #fff;
+    padding: 10px 20px;    border: none;
+    cursor: pointer;
+}
+footer
+{
+    text-align: center;
+    background-color: #333;
+    color: #fff;    padding: 10px;
+}
+
+
+/* Define the animation */
+@keyframes rotateCube {
+  0% {
+    transform: rotateX(0) rotateY(0);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+
+/* Apply the animation to a specific element */
+.cube {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: rotateCube 5s linear infinite; /* 5s duration, linear timing, and infinite loop */
+}
+
+.face {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: #76c5c4;
+  opacity: 0.7;
+  border: 1px solid #333;
+}
+
+.front  { transform: translateZ(50px); }
+.back   { transform: translateZ(-50px) rotateY(180deg); }
+.right  { transform: rotateY(90deg) translateZ(50px); }
+.left   { transform: rotateY(-90deg) translateZ(50px); }
+.top    { transform: rotateX(90deg) translateZ(50px); }
+.bottom { transform: rotateX(-90deg) translateZ(50px); }
